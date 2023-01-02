@@ -6,7 +6,7 @@ This modules finds all solutions for N queens problem
 """
 
 
-class Queen
+class Queen:
     """
     Class defined as Queen to solve nQueens problem
     using recursion
