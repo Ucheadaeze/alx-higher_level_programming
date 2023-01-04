@@ -4,12 +4,12 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
     def test_docstring(self):
         self.assertTrue(len(__import__('6-max_integer').__doc__) > 1)
 
     def test_func_doc(self):
-
         self.assertTrue(len(max_integer.__doc__) > 1)
 
     def test_emptyargs(self):
