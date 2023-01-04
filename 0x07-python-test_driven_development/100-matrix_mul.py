@@ -1,13 +1,11 @@
 #!/usr/bin/python3
 # 100-matrix_mul.py
-# Brennan D Baraban <375@holbertonschool.com>
 """Defines a matrix multiplication function."""
 
 
 def matrix_mul(m_a, m_b):
     """Multiply two matrices.
-
-    Args
+    Args:
         m_a (list of lists of ints/floats): The first matrix.
         m_b (list of lists of ints/floats): The second matrix.
     Raises:
@@ -66,4 +64,4 @@ def matrix_mul(m_a, m_b):
             new_row.append(prod)
         new_matrix.append(new_row)
 
-    return 
+    return new_matrix
