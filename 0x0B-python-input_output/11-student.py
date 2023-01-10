@@ -28,8 +28,8 @@ class Student:
             return (self.__dict__)
         return ({key: value for key, value in self.__dict__.items()
                  if key in attrs})
+   
     def reload_from_json(self, json):
-
         """
         function that replaces all attrb of the
         student instance
