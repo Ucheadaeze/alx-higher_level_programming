@@ -52,13 +52,13 @@ class Base:
             if list_objs is None:
                 jsonfile.write("[]")
             else:
-                list_dicts = [o.to_dictionary() for o in list_objs]
+                list_dicts = [o.to_dictionary() for o in list_bjs]
                 jsonfile.write(Base.to_json_string(list_dicts))
 
     @staticmethod
-    def from_json_string(json_string):
+    def from_json_string(json_string)
         """Return the deserialization of a JSON string.
-
+       
         Args:
             json_string (str): A JSON str representation of a list of dicts.
         Returns:
@@ -87,9 +87,9 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """Return a list of classes instantiated from a file of JSON strings.
-
+       
         Reads from `<cls.__name__>.json`.
-
+       
         Returns:
             If the file does not exist - an empty list.
             Otherwise - a list of instantiated classes.
@@ -143,7 +143,7 @@ class Base:
                 list_dicts = [dict([k, int(v)] for k, v in d.items())
                               for d in list_dicts]
                 return [cls.create(**d) for d in list_dicts]
-        except IOErro
+        except IOError:
             return []
 
     @staticmethod
@@ -154,8 +154,8 @@ class Base:
             list_rectangles (list): A list of Rectangle objects to draw.
             list_squares (list): A list of Square objects to draw.
         """
-        turt = turtle.Turtle()
-        turt.screen.bgcolor("#b7312c")
+        turt = turtle.Turtle()        
+	turt.screen.bgcolor("#b7312c")
         turt.pensize(3)
         turt.shape("turtle")
 

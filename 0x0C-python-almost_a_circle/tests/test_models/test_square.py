@@ -63,8 +63,7 @@ class TestSquare_instantiation(unittest.TestCase):
     def test_size_getter(self):
         self.assertEqual(5, Square(5, 2, 3, 9).size)
 
-    def test_size_setter(self):
-        s = Square(4, 1, 9, 2)
+    def test_size_setter(self):        s = Square(4, 1, 9, 2)
         s.size = 8
         self.assertEqual(8, s.size)
 
@@ -77,6 +76,7 @@ class TestSquare_instantiation(unittest.TestCase):
         s = Square(4, 1, 9, 2)
         s.size = 8
         self.assertEqual(8, s.height)
+
 
     def test_x_getter(self):
         self.assertEqual(0, Square(10).x)
@@ -224,7 +224,6 @@ class TestSquare_x(unittest.TestCase):
     def test_inf_x(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, float('inf'), 2)
-
     def test_nan_x(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, float('nan'), 2)
@@ -236,6 +235,7 @@ class TestSquare_x(unittest.TestCase):
 
 class TestSquare_y(unittest.TestCase):
     """Unittests for testing initialization of Square y attribute."""
+
 
     def test_None_y(self):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
@@ -558,7 +558,7 @@ class TestSquare_update_kwargs(unittest.TestCase):
         self.assertEqual("[Square] (89) 1/3 - 4", str(s))
 
     def test_update_kwargs_width_setter(self):
-        s = Square(10, 10, 10, 10)
+        s = Square(10, 10, 10 10)
         s.update(id=89, size=8)
         self.assertEqual(8, s.width)
 
@@ -622,7 +622,7 @@ class TestSquare_update_kwargs(unittest.TestCase):
 
     def test_update_args_and_kwargs(self):
         s = Square(10, 10, 10, 10)
-        s.update(89, 2, y=6)
+        s.update(89, 2, y=6
         self.assertEqual("[Square] (89) 10/10 - 2", str(s))
 
     def test_update_kwargs_wrong_keys(self):
@@ -640,7 +640,7 @@ class TestSquare_to_dictionary(unittest.TestCase):
     """Unittests for testing to_dictionary method of the Square class."""
 
     def test_to_dictionary_output(self):
-        s = Square(10, 2, 1, 1)
+        s = Square(10, 2, 1, 1
         correct = {'id': 1, 'x': 2, 'size': 10, 'y': 1}
         self.assertDictEqual(correct, s.to_dictionary())
 
