@@ -110,7 +110,7 @@ class TestRectangle_instantiation(unittest.TestCase):
         self.assertEqual(10, r.y)
 
 
-class TestRectangle_width(unittest.TestCase)
+class TestRectangle_width(unittest.TestCase):
     """Unittests for testing initialization of Rectangle width attribute."""
 
     def test_None_width(self):
@@ -230,7 +230,7 @@ class TestRectangle_height(unittest.TestCase):
             Rectangle(1, range(5))
 
     def test_bytes_height(self):
-        with self.assertRaisesRegex(TypeError, "height must be an integer")
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
             Rectangle(1, b'Python')
 
     def test_bytearray_height(self):
@@ -238,7 +238,7 @@ class TestRectangle_height(unittest.TestCase):
             Rectangle(1, bytearray(b'abcdefg'))
 
     def test_memoryview_height(self):
-        with self.assertRaisesRegex(TypeError, "height must be an integer")
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
             Rectangle(1, memoryview(b'abcedfg'))
 
     def test_inf_height(self):
@@ -258,7 +258,7 @@ class TestRectangle_height(unittest.TestCase):
             Rectangle(1, 0)
 
 
-class TestRectangle_x(unittest.TestCase)
+class TestRectangle_x(unittest.TestCase):
     """Unittests for testing initialization of Rectangle x attribute."""
 
     def test_None_x(self):
@@ -401,7 +401,7 @@ class TestRectangle_y(unittest.TestCase):
 class TestRectangle_order_of_initialization(unittest.TestCase):
     """Unittests for testing Rectangle order of attribute initialization."""
 
-    def test_width_before_height(self)
+    def test_width_before_height(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Rectangle("invalid width", "invalid height")
 

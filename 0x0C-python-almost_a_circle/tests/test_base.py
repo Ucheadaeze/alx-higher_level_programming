@@ -82,7 +82,7 @@
 #     def test_frozenset_id(self):
 #         self.assertEqual(frozenset({1, 2, 3}), Base(frozenset({1, 2, 3})).id)
 
-#     def test_range_id(self)
+#     def test_range_id(self):
 #         self.assertEqual(range(5), Base(range(5)).id)
 
 #     def test_bytes_id(self):
@@ -176,7 +176,7 @@
 #         with open("Rectangle.json", "r") as f:
 #             self.assertTrue(len(f.read()) == 53)
 
-#     def test_save_to_file_two_rectangles(self)
+#     def test_save_to_file_two_rectangles(self):
 #         r1 = Rectangle(10, 7, 2, 8, 5)
 #         r2 = Rectangle(2, 4, 1, 2, 3)
 #         Rectangle.save_to_file([r1, r2])

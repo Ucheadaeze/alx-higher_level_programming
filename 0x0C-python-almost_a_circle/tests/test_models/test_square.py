@@ -63,7 +63,8 @@ class TestSquare_instantiation(unittest.TestCase):
     def test_size_getter(self):
         self.assertEqual(5, Square(5, 2, 3, 9).size)
 
-    def test_size_setter(self):        s = Square(4, 1, 9, 2)
+    def test_size_setter(self):
+        s = Square(4, 1, 9, 2)
         s.size = 8
         self.assertEqual(8, s.size)
 
@@ -76,7 +77,6 @@ class TestSquare_instantiation(unittest.TestCase):
         s = Square(4, 1, 9, 2)
         s.size = 8
         self.assertEqual(8, s.height)
-
 
     def test_x_getter(self):
         self.assertEqual(0, Square(10).x)

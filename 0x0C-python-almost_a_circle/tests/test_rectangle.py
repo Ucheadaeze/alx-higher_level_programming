@@ -1,6 +1,5 @@
-# #!/usr/bin/python
+# #!/usr/bin/python3
 # # test_rectangle.py
-# # Brennan D Baraban <375@holbertonschool.com>
 # """Defines unittests for models/rectangle.py.
 
 # Unittest classes:
@@ -632,7 +631,7 @@
 #         with self.assertRaisesRegex(ValueError, "x must be >= 0"):
 #             r.update(89, 1, 2, -6)
 
-#     def test_update_args_invalid_y(self)
+#     def test_update_args_invalid_y(self):
 #         r = Rectangle(10, 10, 10, 10, 10)
 #         with self.assertRaisesRegex(TypeError, "y must be an integer"):
 #             r.update(89, 2, 3, 4, "invalid")

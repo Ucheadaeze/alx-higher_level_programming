@@ -71,8 +71,8 @@ class TestBase_instantiation(unittest.TestCase):
     def test_bool_id(self):
         self.assertEqual(True, Base(True).id)
 
-    def test_list_id(self):        self.assertEqual([1, 2, 3], Base([1, 2, 3]).id)
-
+    def test_list_id(self):        
+        self.assertEqual([1, 2, 3], Base([1, 2, 3]).id)
 
     def test_tuple_id(self):
         self.assertEqual((1, 2), Base((1, 2)).id)
@@ -194,7 +194,7 @@ class TestBase_save_to_file(unittest.TestCase):
         s1 = Square(10, 7, 2, 8)
         s2 = Square(8, 1, 2, 3)
         Square.save_to_file([s1, s2])
-        with open("Square.json", "r") as f
+        with open("Square.json", "r") as f:
             self.assertTrue(len(f.read()) == 77)
 
     def test_save_to_file_cls_name_for_filename(self):
