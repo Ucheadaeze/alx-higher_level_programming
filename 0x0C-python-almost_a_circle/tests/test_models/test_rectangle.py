@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-# test_rectangle.py
 """Defines unittests for models/rectangle.py.
-Unittest classes:
 
+Unittest classes:
     TestRectangle_instantiation - line 25
     TestRectangle_width - line 114
     TestRectangle_height - line 190
@@ -460,7 +459,7 @@ class TestRectangle_stdout(unittest.TestCase):
             rect (Rectangle): The Rectangle to print to stdout.
             method (str): The method to run on rect.
         Returns:
-           The text printed to stdout by calling method on sq.
+            The text printed to stdout by calling method on sq.
         """
         capture = io.StringIO()
         sys.stdout = capture

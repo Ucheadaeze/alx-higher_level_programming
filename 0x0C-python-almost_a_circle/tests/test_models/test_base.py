@@ -1,16 +1,15 @@
 #!/usr/bin/python3
-# test_base.py
 """Defines unittests for base.py.
 
 Unittest classes:
-    TestBase_instantiation - line 23
-    TestBase_to_json_string - line 110
-    TestBase_save_to_file - line 156
-    TestBase_from_json_string - line 234
-    TestBase_create - line 288
-    TestBase_load_from_file - line 340
-    TestBase_save_to_file_csv - line 406
-    TestBase_load_from_file_csv - line 484
+    TestBase_instantiation - line 21
+    TestBase_to_json_string - line 108
+    TestBase_save_to_file - line 154
+    TestBase_from_json_string - line 232
+    TestBase_create - line 286
+    TestBase_load_from_file - line 338
+    TestBase_save_to_file_csv - line 404
+    TestBase_load_from_file_csv - line 482
 """
 import os
 import unittest
@@ -71,7 +70,7 @@ class TestBase_instantiation(unittest.TestCase):
     def test_bool_id(self):
         self.assertEqual(True, Base(True).id)
 
-    def test_list_id(self):        
+    def test_list_id(self):
         self.assertEqual([1, 2, 3], Base([1, 2, 3]).id)
 
     def test_tuple_id(self):
@@ -203,7 +202,7 @@ class TestBase_save_to_file(unittest.TestCase):
         with open("Base.json", "r") as f:
             self.assertTrue(len(f.read()) == 39)
 
-    def test_save_to_file_overrite(self):
+    def test_save_to_file_overwrite(self):
         s = Square(9, 2, 39, 2)
         Square.save_to_file([s])
         s = Square(10, 7, 2, 8)
@@ -361,7 +360,7 @@ class TestBase_load_from_file(unittest.TestCase):
     def test_load_from_file_second_rectangle(self):
         r1 = Rectangle(10, 7, 2, 8, 1)
         r2 = Rectangle(2, 4, 5, 6, 2)
-        Rectangle.save_to_file([r1, r2]
+        Rectangle.save_to_file([r1, r2])
         list_rectangles_output = Rectangle.load_from_file()
         self.assertEqual(str(r2), str(list_rectangles_output[1]))
 
@@ -445,7 +444,7 @@ class TestBase_save_to_file_csv(unittest.TestCase):
         s2 = Square(8, 1, 2, 3)
         Square.save_to_file_csv([s1, s2])
         with open("Square.csv", "r") as f:
-            self.assertTrue("8,10,7,2\n3,8,1,2", f.read()
+            self.assertTrue("8,10,7,2\n3,8,1,2", f.read())
 
     def test_save_to_file__csv_cls_name(self):
         s = Square(10, 7, 2, 8)
@@ -544,6 +543,7 @@ class TestBase_load_from_file_csv(unittest.TestCase):
     def test_load_from_file_csv_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Base.load_from_file_csv([], 1)
+
 
 if __name__ == "__main__":
     unittest.main()
