@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# base.py
+
 """Defines a base model class."""
 import json
 import csv
@@ -7,12 +7,12 @@ import turtle
 
 
 class Base:
-    """Represent the base model.
+    """Base model.
 
-    Represents the "base" for all other classes in project 0x0C*.
+    This Represents the "base" for all other classes in project 0x0C*.
 
-    Attributes:
-        __nb_objects (int): The number of instantiated Bases.
+    Private Class Attributes:
+        __nb_object (int): Number of instantiated Bases.
     """
 
     __nb_objects = 0
@@ -56,7 +56,7 @@ class Base:
                 jsonfile.write(Base.to_json_string(list_dicts))
 
     @staticmethod
-    def from_json_string(json_string)
+    def from_json_string(json_string):
         """Return the deserialization of a JSON string.
 
         Args:
@@ -155,7 +155,7 @@ class Base:
             list_squares (list): A list of Square objects to draw.
         """
         turt = turtle.Turtle()
-	turt.screen.bgcolor("#b7312c")
+        turt.screen.bgcolor("#b7312c")
         turt.pensize(3)
         turt.shape("turtle")
 
