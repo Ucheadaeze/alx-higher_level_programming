@@ -1,1 +1,1 @@
-0x0D. SQL - Introduction
+Introduction to Structured Query Language
