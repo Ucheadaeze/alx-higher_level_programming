@@ -1,4 +1,6 @@
 #!/usr/bin/node
-let myVar = 'Javascript is amazing';
-// function to print myVar
+
+// Script that prints "JavaScript is amazing".
+
+const myVar = 'JavaScript is amazing';
 console.log(myVar);
